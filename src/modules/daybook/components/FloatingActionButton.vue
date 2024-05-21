@@ -1,8 +1,24 @@
 <template>
   <button class="btn btn-primary">
-    <i class="fa fa-2x fa-plus"></i>
+    <i :class="iconClass"></i>
   </button>
 </template>
+
+<script>
+export default {
+  props: {
+    icon: {
+      type: String,
+      default: "fa-plus",
+    },
+  },
+  computed: {
+    iconClass() {
+      return `fa fa-2x ${this.icon}`;
+    },
+  },
+};
+</script>
 
 <style lang="scss" scoped>
 button {

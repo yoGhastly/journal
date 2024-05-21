@@ -13,5 +13,13 @@ export default {
           /* webpackChunkName: "NoEntry" */ "@/modules/daybook/views/EmptyStateEntry"
         ),
     },
+    {
+      path: ":id",
+      name: "entry",
+      component: () =>
+        import(
+          /* webpackChunkName: "EntryView" */ "@/modules/daybook/views/EntryView"
+        ),
+    },
   ],
 };
